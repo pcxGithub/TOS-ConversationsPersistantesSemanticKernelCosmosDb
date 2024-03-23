@@ -194,11 +194,11 @@ foreach (var msg in messageHistory)
 {
     if (msg.ChatRole == "User")
     {
-        chatHistory.AddUserMessage(msMessage);
+        chatHistory.AddUserMessage(msg.Message);
     }
     else
     {
-        chatHistory.AddSystemMessa(msg.Message);
+        chatHistory.AddAssistantMessage(msg.Message);
     }
 }
 ```
